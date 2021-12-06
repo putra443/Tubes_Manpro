@@ -5,8 +5,44 @@ body{
     display: block;
     font-size: 60px;
     background-color: #BD3A00;
+    border-radius: 25px;
     color: white;
     text-align: center;
     margin: 25px 40%;
     padding: 10px;
+}
+
+.content{
+    margin-top: 50px;
+    color: white;
+}
+
+.content_desc p {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    right: 15%;
+}
+.content_desc h1 {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    right: 15%;
+}
+img{
+    opacity: 0.2;
+    height: 250px;
+    width: 100%;
+    border-radius: 25px;
+}
+.start{
+    text-align: center;
+    margin: 50px 40%;
+    border-radius: 25px;
+    background-color: #BD3A00;
+}
+.start a{
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
 }
