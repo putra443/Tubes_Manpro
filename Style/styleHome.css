@@ -1,0 +1,29 @@
+body{
+    background-color: #373839;
+}
+.title{
+    display: block;
+    font-size: 60px;
+    background-color: #BD3A00;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    margin: 25px 40%;
+    padding: 10px;
+}
+
+.content{
+    margin-top: 50px;
+    color: white;
+}
+.searchBar{
+    position: flex;
+    margin: 0% 0% 0% 44%;
+    border-radius: 8px;
+}
+img{
+    opacity: 0.2;
+    height: 250px;
+    width: 100%;
+    border-radius: 25px;
+}
