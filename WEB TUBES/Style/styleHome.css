@@ -1,0 +1,52 @@
+body{
+    background-color: #373839;
+}
+.title{
+    display: block;
+    font-size: 60px;
+    background-color: #BD3A00;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    margin: 25px 40%;
+    padding: 10px;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+}
+
+.content{
+    margin-top: 50px;
+    color: white;
+}
+.content_img{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.searchBar{
+    margin-left: 42%;
+    border-radius: 8px;
+    z-index: 1;
+}
+.imageBac{
+    opacity: 0.5;
+    height: 400px;
+    width: 100%;
+    border-radius: 25px;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.abc{
+    margin-top: 150px; 
+    margin-right: auto; 
+    margin-left: auto; 
+    width: fit-content;
+}
