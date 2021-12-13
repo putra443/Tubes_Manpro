@@ -1,0 +1,23 @@
+.btn_date{
+    background-color: #BD3A00;
+    color: white;
+    padding: 5px 25px;
+    border: none;
+}
+.location{
+    text-align: center;
+    margin: 0px 42%;
+    padding: 25px 0px;
+    border-radius: 30px;
+    font-size: 60px;
+    background-color: #333333;
+}
+
+.graph{
+    margin: 25px 0;
+}
+#chartContainer{
+    height: 400px;
+    width: 75%;
+    margin: 0 12.5%;
+}
