@@ -1,6 +1,17 @@
 <!DOCTYPE html>
     <head>
         <link rel="stylesheet" href="../Style/styleForecast.css">
+        
+        <script>
+            function predict(){
+                var pm = document.getElementById("3pm");
+                var rain = document.getElementById("rain");
+                document.getElementById("hasil").innerHTML = <?php
+        shell_exec("python predictor.py");
+        ?>;
+
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -44,21 +55,21 @@
             <div class="prediction" style="background-color: white; margin-top: 20px; width: 500px; margin-left: auto; margin-right: auto; border-radius: 25px; height: 450px ;">
                 <br><br>
                 <a style="color: black; font-size: 45px; padding: 40px; margin-bottom: 20px;">
-                    Humidity at 9am :<input type="number" style="border-top: none; border-left: none; border-right: none; width: 70px;margin-left: 10px; font-size: 30px;">%
+                    Humidity at 9am :<input id="9am" type="number" style="border-top: none; border-left: none; border-right: none; width: 70px;margin-left: 10px; font-size: 30px;">%
                     <br><br><br> 
                 </a>
                 <a style="color: black; font-size: 45px; padding: 40px; margin-bottom: 20px;">
-                    Humidity at 3pm :<input type="number" style="border-top: none; border-left: none; border-right: none; width: 70px;margin-left: 10px; font-size: 30px;">%
+                    Humidity at 3pm :<input id="3pm" type="number" style="border-top: none; border-left: none; border-right: none; width: 70px;margin-left: 10px; font-size: 30px;">%
                     <br><br><br> 
                 </a>
                 <a style="color: black; font-size: 45px; padding: 40px; margin-bottom: 20px;">
-                    Rainfall :<input type="number" style="border-top: none; border-left: none; border-right: none; width: 70px;margin-left: 10px; font-size: 30px;">%
+                    Rainfall :<input id="rain" type="number" style="border-top: none; border-left: none; border-right: none; width: 70px;margin-left: 10px; font-size: 30px;">%
                     <br><br><br> 
                 </a>
             </div>
             <br>
             <a style="margin-left: 44%">
-                <button type="submit" style="border-radius: 25px; padding: 30px;font-size: 50px; cursor: pointer;color: white;background-color: green;">Predict</button>
+                <button type="submit" style="border-radius: 25px; padding: 30px;font-size: 50px; cursor: pointer;color: white;background-color: green;" onclick="predict()">Predict</button>
             </a>
             <br>
             <br>
@@ -68,7 +79,7 @@
                     Result :
                 </a>
                 <br><br><br><br><br><br>
-                <a style="background-color: green; color: white;  font-size: 70px; margin-left: 27%;pad: 30px;">
+                <a id = "hasil" style="background-color: green; color: white;  font-size: 70px; margin-left: 27%;pad: 30px;">
                     HUJAN
                 </a>
             </div>

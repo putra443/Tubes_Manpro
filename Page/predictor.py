@@ -5,16 +5,21 @@ Created on Sun Dec 12 23:06:15 2021
 @author: yogaa
 """
 
+from pickle import POP_MARK
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-import os
-import pickle
+import sys
 from sklearn.model_selection import train_test_split 
     
-
+pm = sys.argv[1]
+rainfall = sys.argv[2]
 df = pd.read_csv('weatherAUS.csv',usecols=('Rainfall','Humidity3pm','RainToday'))
-X = df.drop(['RainToday'], 1)
+newdata = pd.DataFrame({"Rainfall" : [rainfall],
+                        "Humidity3pm" : [pm]})
+dt = df.drop(['RainToday'],1)
+dt.append(newdata)
+X = dt
 Y = df['RainToday']
 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=.20, random_state=404)
