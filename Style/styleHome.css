@@ -73,3 +73,11 @@ body{
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+.btn_date{
+    background-color: #BD3A00;
+    color: white;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: grab;
+}
