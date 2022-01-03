@@ -4,12 +4,17 @@
         
         <script>
             function predict(){
-                var pm = document.getElementById("3pm");
-                var rain = document.getElementById("rain");
-                document.getElementById("hasil").innerHTML = <?php
-        shell_exec("python predictor.py");
-        ?>;
-
+                var pm = document.getElementById("3pm").value;
+                var rain = document.getElementById("rain").value;
+                if (pm<50 && rain<50 ){
+                    document.getElementById("hasil").innerHTML = "Tidak hujan";
+                } else if (pm>50 && rain<50){
+                    document.getElementById("hasil").innerHTML = "Hujan";
+                } else if (pm<50 && rain>50){
+                    document.getElementById("hasil").innerHTML = "Hujan";
+                }else{
+                    document.getElementById("hasil").innerHTML = "Tidak hujan";
+                }
             }
         </script>
     </head>
